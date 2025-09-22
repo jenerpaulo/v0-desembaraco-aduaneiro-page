@@ -152,6 +152,37 @@
   --ring: oklch(0.98 0 0);
 }
 
+/* Adding light theme that matches DEMNPEX corporate colors */
+.light-theme {
+  --background: oklch(0.98 0 0);
+  --foreground: oklch(0.2 0.08 240);
+  --card: oklch(1 0 0);
+  --card-foreground: oklch(0.2 0.08 240);
+  --primary: oklch(0.35 0.15 240);
+  --primary-foreground: oklch(0.98 0 0);
+  --secondary: oklch(0.92 0.02 240);
+  --secondary-foreground: oklch(0.2 0.08 240);
+  --muted: oklch(0.95 0.01 240);
+  --muted-foreground: oklch(0.5 0.05 240);
+  --accent: oklch(0.45 0.18 200);
+  --accent-foreground: oklch(0.98 0 0);
+  --border: oklch(0.9 0.02 240);
+  --input: oklch(0.95 0.01 240);
+  --ring: oklch(0.45 0.18 200);
+  --demnpex-blue: oklch(0.35 0.15 240);
+  --demnpex-light-blue: oklch(0.45 0.18 200);
+  --demnpex-gray: oklch(0.92 0.02 240);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
 @theme inline {
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
@@ -194,13 +225,4 @@
   --color-logistics-neon: var(--logistics-neon);
   --color-logistics-orange: var(--logistics-orange);
   --color-logistics-blue: var(--logistics-blue);
-}
-
-@layer base {
-  * {
-    @apply border-border outline-ring/50;
-  }
-  body {
-    @apply bg-background text-foreground;
-  }
 }
